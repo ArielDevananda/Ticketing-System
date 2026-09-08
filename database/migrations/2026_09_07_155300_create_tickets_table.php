@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('status', ['open', 'onprogress', 'resolved', 'rejected'])->default('open');
             $table->enum('priority', ['low', 'medium', 'high']);
             $table->timestamps();
+            $table->timestamp('completed_at')->nullable();
         });
     }
 
